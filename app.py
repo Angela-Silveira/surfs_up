@@ -21,11 +21,11 @@ app = Flask(__name__)
 def welcome():
     return(
         '''
-        Welcome to the Climate Analysis API!
-        Available Routes:
-        /api/v1.0/precipitation
-        /api/v1.0/stations
-        /api/v1.0/tobs
+        Welcome to the Climate Analysis API! \n
+        Available Routes: \n
+        /api/v1.0/precipitation \n
+        /api/v1.0/stations \n
+        /api/v1.0/tobs \n
         /api/v1.0/temp/start/end
         ''')
 
@@ -46,7 +46,7 @@ def stations():
     return jsonify(stations=stations)
 
 # Add temperatures route
-@app.route("/api/v1.9/tobs")
+@app.route("/api/v1.0/tobs")
 def temp_monthly():
     prev_year = dt.date(2017, 8, 23) - dt.timedelta(days=365)
     results = session.query(Measurement.tobs).\
@@ -56,7 +56,7 @@ def temp_monthly():
     return jsonify(temps=temps)
 
 # Add minimum, average, maximum temperatures
-@app.route("/api/v1.0/temp/<start>")
+#@app.route("/api/v1.0/temp/<start>")
 @app.route("/api/v1.0/temp/<start>/<end>")
 def stats(start=None, end=None):
     sel = [func.min(Measurement.tobs), func.avg(Measurement.tobs),
