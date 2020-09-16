@@ -56,7 +56,7 @@ def temp_monthly():
     return jsonify(temps=temps)
 
 # Add minimum, average, maximum temperatures
-#@app.route("/api/v1.0/temp/<start>")
+@app.route("/api/v1.0/temp/<start>")
 @app.route("/api/v1.0/temp/<start>/<end>")
 def stats(start=None, end=None):
     sel = [func.min(Measurement.tobs), func.avg(Measurement.tobs),
