@@ -6,6 +6,7 @@ The purpose of the included analysis is to explore weather trends (temperature) 
 - June is typically a warmer month for Hawai'i, the difference in temperature is around 4 degrees. The mean temperature in June is 74.9, while December is 71. 
 - While December may have some outlying low temperatures (such as 56), those would be rare given that 25th percentile is consistent with a 4 degree difference (June 25th percentile = 73, while December's 25th percentile = 69). One might argue those few outliers are not enough to deter the overall success of a business.
 - The 50th percentile, 75th percentile, and maximum temperatures differ only 2-4 degrees between June and December, indicating the temperature variation year-round is less than 5 degrees overall. 
+
 ![JuneTemperatures.png](JuneTemperatures.png) VS ![DecemberTemperatures.png](DecemberTemperatures.png)
 
 
